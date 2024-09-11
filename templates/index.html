@@ -1,20 +1,25 @@
+
+{%from 'bootstrap5/'%}
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-BR">
 <head>
+   
+    {%block head%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/custom.css')}} " />
-</head>
-<body>
-   <main id="content" class="px-5">
-    <div class="cotainer-fluid">
-<h1>ola mundo</h1>
-    </div> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Gerenciamento de Estoque</title>
+    <title>{% if title % }{{title}}{% else % }  Aplicação{% endif % }</title>
+    {{bootstrap.load.css() }}
+    {%endblock%}
 
-   </main> 
-   <footer>
-    <p class="align-center"> Copyright 2024, </p>
-   </footer>
+</head>
+
+<!-- bloco do jinjaL -->
+ <!-- s/tittle  <title>{% if title % }{{title}}{% else % }  Aplicacap  {% endif % }</title>  -->
+   <title>{{title}}</title>
+    
+    
+
 </body>
 </html>
