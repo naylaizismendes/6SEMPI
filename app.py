@@ -1,28 +1,15 @@
-from flask import Flask,render_template
-from flask_bootstrap import Bootstrap4
-
+from flask import Flask
+from routes.home import home_route
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 
-bootstrap = Bootstrap4(app)
-#CRIAÇÃO DAS ROTAS(AS REQUISIÇÃO)
+# Inicializando o Bootstrap5 no Flask
+bootstrap = Bootstrap(app)
 
-#inicializando uma açao declarando os arqivos
-@app.route("/")
-@app.route("/index")
-def create_app():
-    app= Flask(__name__ ,
-           isinstance_relative_config=True,
-           static_folder='static',
-           template_folder='templates')
+# Registrando a blueprint
+app.register_blueprint(home_route)
 
-
-
-def create_app():
-    titulo= "Sistema de estoque"
-    products= Product.query.all()                         
-    #vari.contexto  valor
-    return render_template("index.html",titulo=titulo ,products=products,title="Pagina Principal")
-
-#execucao MODO DESENVOLVEDOR
-app.run(debug=True)
+# Iniciando o servidor
+if __name__ == '__main__':
+    app.run(debug=True)

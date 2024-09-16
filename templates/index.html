@@ -1,25 +1,43 @@
+{% from 'bootstrap4/form.html' import render_form %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My First Bootstrap Page</title>
 
-{%from 'bootstrap5/'%}
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-   
-    {%block head%}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Gerenciamento de Estoque</title>
-    <title>{% if title % }{{title}}{% else % }  Aplicação{% endif % }</title>
-    {{bootstrap.load.css() }}
-    {%endblock%}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="C:\Users\nayla.ferreira\6SEMPI\static\css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+<body>
+<!-- MENU SUPERIOR -->
+<div class="wrapper">
+  <aside id="sidebar">
 
-</head>
 
-<!-- bloco do jinjaL -->
- <!-- s/tittle  <title>{% if title % }{{title}}{% else % }  Aplicacap  {% endif % }</title>  -->
-   <title>{{title}}</title>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
     
     
 
-</body>
+
+     <!-- Botão de menu -->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      </nav>
+    </div>
+          <!-- Conteúdo do menu que será colapsado -->
+         
+
+  <!-- Bootstrap Javascripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>    
 </html>
