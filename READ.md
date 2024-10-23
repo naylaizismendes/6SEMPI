@@ -7,4 +7,4 @@ $flask --app main run
 $python app.py
 
 in my pc:
-python3 app.py
+    python3 app.py

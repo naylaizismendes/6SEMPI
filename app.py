@@ -1,34 +1,43 @@
-#IMPORTANTO AS PASTAS,BIBLIOTECAS E TEMPLATES
 from flask import Flask
-
-
-from routes.home import home_route
-from routes.login import login_route
-
-
 from flask_bootstrap import Bootstrap
 
+# Importando as rotas da pasta routes
+from routes.home import home_route  # Rota para home.py
+from routes.login import login_route  # Rota para login.py
+from routes.cadastrar import cadastrar_route  # Rota para cadastrar.py
+#importando bobilioteca de banco de dados
+from flask_sqlalchemy import SQLAlchemy
+from models.produto import db
 
-#importando - models
-from app import LoginForm
+app=Flask(__name__)
+db.init_app(app)
+#uri conexao com o banco de dados 
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///produto.db"
 
-app = Flask(__name__)
-
-# Inicializando o Bootstrap5 no Flask
+db= SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 
 
-# Registros das blueprint HOME _> home.py
-app.register_blueprint(home_route)
 
 
-# Registrando o Blueprint LOGIN -> login.py
-app.register_blueprint(login_route)
-# Iniciando o servidor
+ 
+    
+
+
+
+
+# Registrando as Blueprints
+app.register_blueprint(home_route)  # Rota para home.py
+app.register_blueprint(login_route)  # Rota para login.py
+app.register_blueprint(cadastrar_route)  # Rota para cadastrar.py
+
+
+#inicializar o banco de dados -> sql lite 
+with app.app_context():
+    db.create_all()
+
+#inicizializando o sistema 
 if __name__ == '__main__':
+    
+    db.create_all()   
     app.run(debug=True)
- 
- 
- 
- #rotas cridas para acessar os conteudos da pagee 
- #home/.../...

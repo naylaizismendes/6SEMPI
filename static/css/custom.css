@@ -1,75 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-/* Aplicando estilos ao menu lateral */
-nav.menu-lateral {
-    width: 300px;
-    height: 100%;
-    background-color: rgb(220, 207, 20); /* Cor do fundo do menu */
-    font-family: "Playfair Display", serif; /* Aplicando a fonte ao menu */
-    font-optical-sizing: auto;
-    box-shadow: 4px 0 0 ;
-    position:fixed;
-    top: auto;
-   
-   
-   
-}
-
-/* Seletor global, aplicando estilo a todos os elementos */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'monospace'; /* Se você quer 'Mono', é recomendado usar 'monospace' */
+    font-family: 'Poppins',Sans-Serif;
 }
 
-/* Para aplicar a fonte Playfair Display em todo o conteúdo */
-body {
-    font-family: "Playfair Display", serif;
-}
-.botao-expandir{
-    font-size: 60px;
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 75px;
     width: 100%;
-    padding-left: 25px;
-    text-align: left;
+    background: yellow;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-.botao-expandir > i{
-    color:rgb(189, 162, 168);
-    font-size: 40px;
-    cursor: pointer;
-   
-}
-
-
-ul{
+nav .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 100%;
-    list-style: none;
+    width: 90% ;
+    margin: auto;
 }
-
-ul li.item-menu a{
-    color: wheat;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
-    display:flex;
-    margin-bottom: 40px;
-    line-height: 40px;
-}
-ul li.item-menu a .txt-link{
-     margin-left: 20px;
-}
-
-ul li.item-menu a .icon >i{
-    font-size: 20px;
+nav .navbar .logo a {
+    color :#fff;
+    font-size: 27px;
+    font-weight: 600;
+    text-decoration:none;
     
 }
-ul li.item-menu:hover{
-    background-color:blanchedalmond;
-   
+nav .navbar .menu{
+    display: flex;
 }
 
-nav.menu-lateral:hover{
-    width: 300px;
+.navbar .menu li{
+    display: flex;
+    margin: 0 15px;
+}
 
+li{
+    list-style-type: none;
+}
+.navbar.menu li a{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
 }
