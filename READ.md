@@ -1,6 +1,7 @@
 #dronestock
 $pip install -r requirements.txt
 pip install Jinja2
+pip install Flask-Migrate
 
 #run
 $flask --app main run

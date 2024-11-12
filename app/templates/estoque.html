@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row mt-4">
+    <h3> ESTOQUE</h3>
+  <form method="get" class="row">
+ <div class = "col-9">
+    <input type="text" name="pesquisa" class="form-control">
+
+ </div>
+ <div class="col-12">
+    <button type="submit" class="btn btn-primary">Pesquisar</button>
+
+ </div>
+  </form>
+        <div class="col-12">
+            <table class="table">
+                    <thead>
+                        <tr>
+                          <th>nome</th>  
+                          <th>quantidade</th>  
+                          <th>categoria</th>  
+                          <th> fornecedor</th> 
+                          <th> descricao</th>   
+                          <th>data_de_fabricaca</th> 
+                          <th> data_de_validade </th> 
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for linha in context['dados']%}
+                        <tr>
+                            <td>{{linha.nome}}</td>
+                            <td>{{linha.quantidade}}</td>
+                            <td>{{linha.categoria}}</td>
+                            <td>{{linha.fornecedor}}</td>
+                            <td>{{linha.descricao}}</td>
+                            <td>{{linha.data_de_fabricaca}}</td>
+                            <td>{{linha.data_de_validade}}</td>
+                        </tr>
+                         {%endfor%}
+                    </tbody>
+
+            </table>
+
+        
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu responsivo</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">Drone Stock </div>
+
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
+
+        <ul>
+            <li> <a href="#" class="active"> Home </a> </li>
+            <li> <a href="{{ url_for('cadastrar_novo') }}">Cadastrar</a></li> 
+            <li>  <a href="{{ url_for('estoque_lista') }}">Estoque</a></li>
+
+
+           
+        </ul>
+    </nav>
+   
+
+
+    <!-- Conteúdo adicional aqui -->
+</div>
+<script>
+ var ul = document.querySelector('nav ul');
+var menuBtn = document.querySelector('.menu-btn i');
+
+function menuShow() {
+    if (ul.classList.contains('open')) {
+        ul.classList.remove('open');
+    }else{
+        ul.classList.add('open');
+    }
+}
+</script>
+{% endblock %}

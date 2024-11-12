@@ -4,21 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PAGE</title>
-
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<style>
-    
-
-</style>  
-
-</head>
-
-
+  </head>
 <body>
-<section id="inicio" class="row m-0 p-0">
-</section>
-oi
+    {%block content%}
+    {%endblock%}
 </body>
+
