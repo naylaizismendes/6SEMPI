@@ -2,6 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap4
+from flask_login
+from flask_bcrypt
 #atualizando a camada de segurança
 import os #icarregar a var
 from dotenv import load_dotenv
