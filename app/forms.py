@@ -1,5 +1,6 @@
 
 from flask_wtf import FlaskForm
+<<<<<<< HEAD
 from wtforms import StringField,SelectField,DateField,FloatField,IntegerField,SubmitField,TextAreaField,EmailField,PasswordField
 from app.models import Produto,User
 from wtforms.validators import DataRequired,Email,ValidationError,EqualTo
@@ -50,6 +51,11 @@ class LoginForm(FlaskForm):
     
 
    
+=======
+from wtforms import StringField,SelectField,DateField,FloatField,IntegerField,SubmitField,TextAreaField,EmailField
+from app.models import Produto
+
+>>>>>>> 7f8a86282e522ad4c689a07a6ae339ea72ca01b9
 
 class ProdutoForm(FlaskForm):
     nome = StringField( 'nome',validators=()) #vALIDATORS = QUTD MAXIA

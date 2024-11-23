@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<<<<<<< HEAD
 <div class="container">
     {% if current_user.is_authenticated %}
         <span class="btn btn-primary">{{ current_user.nome }} {{ current_user.sobrenome }}</span>
@@ -27,4 +28,54 @@
     {% endif %}
 </div>
 <hr>
+=======
+
+
+
+
+    <nav>
+        <div class="logo">Drone Stock </div>
+
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
+
+        <ul>
+            <li> <a href="#" class="active"> <i class="bi bi-house-fill"></i>Home </a> </li>
+            <li> <a href="{{ url_for('cadastrar_novo') }}"><i class="bi bi-cart-plus-fill"></i> Cadastrar</a></li> 
+            <li>  <a href="{{ url_for('estoque_lista') }}"><i class="bi bi-card-list"></i>Estoque</a></li>
+
+
+           
+        </ul>
+    </nav>
+   
+
+
+    <aside id="header">
+
+    </aside>
+    <main id="main">
+       <section id="inicio" class="row m-0 p-0">
+
+       </section>
+    </main>
+    <!-- java script para o menu lateral  -->
+</div>
+<script>
+ var ul = document.querySelector('nav ul');
+var menuBtn = document.querySelector('.menu-btn i');
+
+
+function menuShow() {
+    if (ul.classList.contains('open')) {
+        ul.classList.remove('open');
+    }else{
+        ul.classList.add('open');
+    }
+}
+
+
+</script>
+>>>>>>> 7f8a86282e522ad4c689a07a6ae339ea72ca01b9
 {% endblock %}

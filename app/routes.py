@@ -1,4 +1,5 @@
 from app import app, db
+
 from flask import render_template, url_for, request,redirect,flash
 from app.models import Produto,User
 from app.forms import ProdutoForm,UserForm,LoginForm
@@ -29,6 +30,17 @@ def cadastro():
 def logout():
     logout_user()
     return redirect(url_for('homepage'))
+
+
+from flask import render_template, url_for, request
+from app.models import Produto
+from app.forms import ProdutoForm
+from datetime import datetime 
+
+# Homepage
+@app.route('/')
+def homepage():
+    return render_template('index.html')
 
 
 # Rota para cadastrar novos produtos
@@ -106,4 +118,12 @@ def produtoDetail(id):
         return redirect(url_for("estoque_lista"))
     return render_template('produto_detail.html', obj=Produto)
 
+
+
+@app.route('/produto/<int:id>/')
+def produtoDetail(id):
+    obj = Produto.query.get(id) #recupera o objeto 
+    
+
+    return render_template('produto_detail.html', obj=obj)
 
