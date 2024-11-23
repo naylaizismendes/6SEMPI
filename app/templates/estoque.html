@@ -41,6 +41,7 @@
                             <td>{{linha.data_de_fabricaca}}</td>
                             <td>{{linha.data_de_validade}}</td>
                             <td><a href="{{ url_for('produtoDetail', id=linha.id) }}" class="btn btn-info">Detalhes</a></td>
+                            <td><a href="{{ url_for('produtoDetail', id=linha.id) }}" class="btn btn-info">Editar</a></td>
                         </tr>
                          {%endfor%}
                     </tbody>

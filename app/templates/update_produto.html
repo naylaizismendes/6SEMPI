@@ -1,10 +1,9 @@
 {%extends "base.html"%}
 {%block content%}
-
+!<
 <div class="container">
 {%include 'nav.html'%}
-<!--EDIÇÃO DOS ITENS-->
-<form method="post" action="/produto/editar/{{ obj.id }}">
+
 <div class="row">
 
     <div class="col-md-6">
@@ -54,6 +53,6 @@
 
 
 </div>
-</form>
+
 
 {%endblock%}
