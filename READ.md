@@ -1,5 +1,5 @@
 #dronestock
-$pip install -r requirements.txt
+$ip install -r requirements.txtp
 pip install Jinja2
 pip install Flask-Migrate
 
@@ -9,3 +9,12 @@ $python app.py
 
 in my pc:
     python3 app.py
+
+
+    user-login
+
+    - falha de segurança 
+    secret key
+
+
+    

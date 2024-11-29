@@ -1,3 +1,7 @@
+
+{%extends "base.html"%}
+{%block content%}
+
 <div class="container">
     <div class="row mt-4">
     <h3> ESTOQUE</h3>
@@ -22,6 +26,7 @@
                           <th> descricao</th>   
                           <th>data_de_fabricaca</th> 
                           <th> data_de_validade </th> 
+                            <th></th>
 
                         </tr>
                     </thead>
@@ -35,6 +40,11 @@
                             <td>{{linha.descricao}}</td>
                             <td>{{linha.data_de_fabricaca}}</td>
                             <td>{{linha.data_de_validade}}</td>
+                            <td><a href="{{ url_for('produtoDetail', id=linha.id) }}" class="btn btn-info">Detalhes</a></td>
+<<<<<<< HEAD
+                            <td><a href="{{ url_for('produtoDetail', id=linha.id) }}" class="btn btn-info">Editar</a></td>
+=======
+>>>>>>> 7f8a86282e522ad4c689a07a6ae339ea72ca01b9
                         </tr>
                          {%endfor%}
                     </tbody>
@@ -46,3 +56,5 @@
     </div>
 
 </div>
+
+{%endblock%}
